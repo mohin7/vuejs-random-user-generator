@@ -53,6 +53,11 @@ button {
   padding: 1rem 1.5rem;
 }
 
+.loading {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 button:focus {
   outline: none;
 }

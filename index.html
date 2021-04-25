@@ -12,7 +12,12 @@
       <img :class="gender" :src="picture" :alt="`${firstName} ${lastName}`" />
       <h1>{{firstName}} {{firstName}}</h1>
       <h3>Email: {{email}}</h3>
-      <button :class="gender" @click="getUser()">Get Random User</button>
+      <button
+        :class="[gender? gender:'', isLoading? 'loading':'']"
+        @click="getUser()"
+      >
+        {{isLoading ? 'Loading!':'Get Random User'}}
+      </button>
     </div>
 
     <script src="https://unpkg.com/vue@next"></script>
